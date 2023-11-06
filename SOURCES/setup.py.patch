@@ -1,0 +1,20 @@
+This patch removes the extras_require entry in setup.py for the enum34
+package. This entry generates an error with the old version of setuptools
+used in the build container for xcp-ng 8.2 and is not needed since
+setuptool is not used to generate the spec file.
+
+---
+diff --git a/setup.py b/setup.py
+index 60b74ac..26e02be 100755
+--- a/setup.py
++++ b/setup.py
+@@ -116,9 +116,6 @@ setup(
+         'Programming Language :: Python :: 3.8',
+         'Programming Language :: Python :: 3.9',
+     ],
+-    extras_require={
+-        ":python_version<'3'": ['enum34'],
+-    },
+     packages=[
+         'linstor'
+     ],
