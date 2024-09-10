@@ -1,6 +1,6 @@
 Summary: Linstor python api
 Name:    python-linstor
-Version: 1.19.0
+Version: 1.23.0
 Release: 1%{?dist}
 License: LGPLv3
 URL:     https://linbit.com/linstor/
@@ -29,5 +29,8 @@ PYTHON=%{__python3} %{__python3} ./setup.py install --single-version-externally-
 %doc README.md
 
 %changelog
+* Tue Sep 10 2024 Ronan Abhamon <ronan.abhamon@vates.tech> - 1.23.0-1
+- Update to python-linstor-1.23.0
+
 * Tue Nov 07 2023 Thierry Escande <thierry.escande@vates.tech> - 1.19.0-1
 - Update to python-linstor-1.19.0
