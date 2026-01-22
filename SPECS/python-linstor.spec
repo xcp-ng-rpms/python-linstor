@@ -1,6 +1,6 @@
 Summary: Linstor python api
 Name:    python-linstor
-Version: 1.23.0
+Version: 1.27.0
 Release: 1%{?dist}
 License: LGPLv3
 URL:     https://linbit.com/linstor/
@@ -9,13 +9,13 @@ BuildArch: noarch
 BuildRequires: python3-devel
 BuildRequires: python3-setuptools
 
-Source0: https://pkg.linbit.com/downloads/linstor/%{name}-%{version}.tar.gz
+Source0: https://pkg.linbit.com/downloads/linstor/python_linstor-%{version}.tar.gz
 
 %description
 This repository contains a Python library to communicate with a linstor controller.
 
 %prep
-%autosetup -p1
+%autosetup -p1 -n python_linstor-%{version}
 
 %build
 PYTHON=%{__python3} %{__python3} ./setup.py build
@@ -29,6 +29,9 @@ PYTHON=%{__python3} %{__python3} ./setup.py install --single-version-externally-
 %doc README.md
 
 %changelog
+* Tue Dec 09 2025 Ronan Abhamon <ronan.abhamon@vates.tech> - 1.27.0-1
+- Update to python-linstor-1.27.0
+
 * Tue Sep 10 2024 Ronan Abhamon <ronan.abhamon@vates.tech> - 1.23.0-1
 - Update to python-linstor-1.23.0
 
